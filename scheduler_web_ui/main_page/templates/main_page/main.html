@@ -3,15 +3,177 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Success</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync Lab Solutions</title>
     <link rel="stylesheet" href="{% static 'css/main_page.css' %}" />
   </head>
   <body>
-    <div class="container">
-      <h2>Login Successful</h2>
-      <p>Main Page Under progress</p>
-    </div>
+     <header>
+              <div class="container">
+                 <div class="header-flex">
+                      <div class="left-section">
+                            <h1>Sync Lab Solutions</h1>
+                            <nav>
+                                  <div id="top-menu" class="top-menu">
+                                        <ul>
+                                              <li><a href="#home">Home</a></li>
+                                              <li><a href="#about">About Us</a></li>
+                                              <li><a href="#concept">Concept</a></li>
+                                              <li><a href="#features">Features</a></li>
+                                              <li><a href="#team">Team</a></li>
+                                              <li><a href="#contact">Contact</a></li>
+                                          </ul>
+                                  </div>
+                                  <div id="dropdown-menu" class="dropdown-menu">
+                                        <ul>
+                                              <li><a href="#home">Home</a></li>
+                                              <li><a href="#about">About Us</a></li>
+                                              <li><a href="#concept">Concept</a></li>
+                                              <li><a href="#features">Features</a></li>
+                                              <li><a href="#team">Team</a></li>
+                                              <li><a href="#contact">Contact</a></li>
+                                              <li><a href="#proof-of-concept">Proof of Concept</a></li>
+                                          </ul>
+                                    </div>
+                              </nav>
+                        </div>
+                      <a href="#proof-of-concept" class="right-button">Proof of Concept</a>
+                      <div class="hamburger" id="hamburger">
+                                        &#9776;
+                      </div>
+                  </div>
+              </div>
+          </header>
+
+        <section id="home" class="section-hero hero">
+              <div class="container">
+                    <h2>Revolutionize Your Lab Operations</h2>
+                    <p>Streamline your lab protocols with our never-done automation solutions.</p>
+                </div>
+          </section>
+
+        <section id="about">
+              <div class="container">
+                    <h2>About Us</h2>
+                    <p>We are a team of experienced technical problems solvers based in Zurich, dedicated to improving
+                          lab efficiency
+                          through automation. Our
+                          mission is to provide reliable and easy-to-use solutions that save time and dynamically adapt to errors
+                          in lab
+                          procedures.</p>
+                </div>
+          </section>
+
+        <section id="concept">
+              <div class="container">
+                    <h2>Our Concept</h2>
+                    <div class="concept-grid">
+                          <div class="concept-item">
+                                <img src="workflow-1.jpg" alt="Workflow Step 1">
+                                <p>Step 1: Setup your lab environment by selecting the available lab machines.</p>
+                            </div>
+                          <div class="concept-item">
+                                <img src="workflow-2.jpg" alt="Workflow Step 2">
+                                <p>Step 2: Design lab protocols using a bird's eye point of view.</p>
+                            </div>
+                          <div class="concept-item">
+                                <img src="workflow-1.jpg" alt="Workflow Step 1">
+                                <p>Step 1: Initial data collection and processing to prepare for automation.</p>
+                            </div>
+                          <div class="concept-item">
+                                <img src="workflow-2.jpg" alt="Workflow Step 2">
+                                <p>Step 2: Automated execution and monitoring of lab protocols to ensure consistency.</p>
+                            </div>
+                      </div>
+                </div>
+          </section>
+
+        <section id="features">
+            <div class="container">
+                  <h2>Features</h2>
+                  <div class="features-grid">
+                        <div class="feature">
+                              <h3>Automated Protocols</h3>
+                              <p>Automate repetitive lab protocols to ensure consistency and accuracy.</p>
+                          </div>
+                        <div class="feature">
+                              <h3>Customize Protocols</h3>
+                              <p>Seamlessly manage your lab. By creating new protocols on the spot and feeding them
+                                    to your lab's pipeline.
+                                </p>
+                          </div>
+                        <div class="feature">
+                              <h3>Optimized Solutions</h3>
+                              <p>We offer tailored solutions to meet the specific needs of your lab.
+                                    From optimizing your Protocols or run them to your unique specifications.
+                                </p>
+                          </div>
+                    </div>
+              </div>
+        </section>
+
+        <section id="team">
+              <div class="container">
+                    <h2>Meet Our Team</h2>
+                    <div class="team-photo">
+                    <img src="{% static 'images/team_image.jpg' %}" alt="Team Photo">
+                      </div>
+                    <div class="team-grid">
+                          <div class="team-member">
+                                <h3>Alberto</h3>
+                                <p>Software Engineer - Specializes in lab robotics.</p>
+                            </div>
+                          <div class="team-member">
+                                <h3>Giovanni</h3>
+                                <p>Strategy and business development.</p>
+                            </div>
+                          <div class="team-member">
+                                <h3>Riccardo</h3>
+                                <p>Mathematical Researcher - Specializes in optimization research.</p>
+                            </div>
+                          <div class="team-member">
+                                <h3>Rui</h3>
+                                <p>Software Engineer - Specializes in developing UI/Automation software .</p>
+                            </div>
+                      </div>
+                </div>
+          </section>
+
+
+        <section id="contact">
+              <div class="container">
+                    <h2>Contact Us</h2>
+                    <form id="contact-form">
+                          <label for="name">Name:</label>
+                          <input type="text" id="name" name="name" required>
+
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email" required>
+
+                          <label for="message">Message:</label>
+                          <textarea id="message" name="message" required></textarea>
+
+                          <button type="submit">Send Message</button>
+                      </form>
+                </div>
+          </section>
+
+        <section id="proof-of-concept" class="section-hero hero-alt">
+              <div class="container">
+                    <h2>Hands-On Proof of Concept</h2>
+                    <a href="" class="cta-button">Get Started</a>
+                </div>
+          </section>
+
+        <footer>
+              <div class="container">
+                    <p> Zurich, Switzerland </p>
+                </div>
+          </footer>
+
+    <script src="{% static 'js/main_page_scripts.js' %}" defer></script>
+
+
   </body>
 </html>

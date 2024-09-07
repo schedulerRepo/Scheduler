@@ -1,27 +1,430 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  font-family: "Arial", sans-serif;
-  background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+        color: #333;
+}
+
+/* Header Styles */
+header {
+      background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        position: relative; /* Important for positioning the dropdown menu */
+}
+
+/* Flexbox Layout for Header */
+.header-flex {
+      display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.left-section {
+      display: flex;
+        align-items: center;
+}
+
+.left-section h1 {
+      margin: 0;
+        font-size: 1.8em;
+        margin-right: 20px;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+      display: none;
+        font-size: 1.8em;
+        cursor: pointer;
+        color: #fff;
+        margin-left: auto;
+}
+
+/* Dropdown Menu (Slides from below) */
+.dropdown-menu {
+      position: absolute;
+        top: 100%; /* Position it below the header */
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out; /* Smooth sliding effect */
+        z-index: 1000;
+}
+
+.dropdown-menu ul {
+      list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.dropdown-menu ul li {
+      margin: 20px 0;
+}
+
+.dropdown-menu ul li a {
+      color: #fff;
+        text-decoration: none;
+        font-size: 1.2em;
+}
+
+.dropdown-menu ul li a:hover {
+      color: #007BFF;
+}
+
+/* Show the dropdown menu when active */
+.dropdown-menu.active {
+      max-height: 500px; /* Adjust height to fit menu items */
+}
+
+/* Top menu */
+.top-menu ul {
+      list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+}
+
+.top-menu ul li {
+      margin: auto;
+}
+
+.top-menu ul li a {
+      color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+}
+
+.top-menu ul li a:hover {
+      text-decoration: underline;
+}
+
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+     .left-section h1 {
+        margin: 0;
+        font-size: 1em;
+        margin-right: 10px;
+      }     
+      .hamburger {
+        display: block;
+      }
+
+      .right-button {
+        display: none;
+      }
+     
+      .top-menu {
+        display: none;
+      }
+      .header-flex {
+          justify-content: space-between;
+      }
+
+      .left-section h1 {
+        margin-right: 10px;
+      }
+}
+
+
+/* CTA Button on the Right */
+.right-button {
+      background-color: #252525;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+}
+
+.right-button:hover {
+      background-color: #0e0e0e;
+}
+
+.section-hero {
+      position: relative;
+        background: url('lab-background.jpg') no-repeat center center/cover;
+        color: #fff;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+}
+
+.section-hero::before {
+      content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent black overlay */
+      z-index: 1;
+}
+
+.section-hero h2,
+.section-hero p {
+      position: relative;
+        z-index: 2;
+}
+
+.section-hero h2 {
+      font-size: 3em;
+        margin: 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        /* Text shadow for better readability */
+}
+
+.section-hero p {
+      font-size: 1.5em;
+        margin: 20px 0;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        /* Text shadow for better readability */
+}
+
+.cta-button:hover {
+      background-color: #0056b3;
+}
+
+/* Specific hero section with different backgrounds */
+.hero {
+      color: #fff;
+        background: url('lab_background2.jpg') no-repeat center center/cover;
+}
+
+.hero-alt {
+      color: #fff;
+        background: url('lab_background.jpeg') no-repeat center center/cover;
+}
+
+.cta-button {
+      display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        position: relative;
+        z-index: 2;
+}
+
+.cta-button:hover {
+      background-color: #0056b3;
 }
 
 .container {
-  text-align: center;
-  background-color: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 80%;
+        margin: 0 auto;
+        max-width: 1200px;
 }
 
-h2 {
-  margin-bottom: 20px;
-  color: #333;
+#about,
+#features,
+#contact {
+      padding: 60px 0;
+        text-align: center;
 }
 
 
-p {
-  color: #666;
+
+#features h2 {
+      margin-bottom: 40px;
+        font-size: 2.5em;
+        color: #333;
+}
+
+.features-grid {
+      display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns by default for large screens */
+        gap: 20px;
+}
+
+.feature {
+      background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+      margin-bottom: 15px;
+        font-size: 1.5em;
+        color: #007BFF;
+}
+
+.feature p {
+      font-size: 1em;
+        color: #666;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+      .features-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+      }
+}
+
+@media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr; /* Single column for small screens */
+      }
+
+      #features h2 {
+        font-size: 2em; /* Smaller heading for small screens */
+      }
+
+      .feature {
+        padding: 15px; /* Adjust padding for smaller screens */
+      }
+
+      .feature h3 {
+        font-size: 1.3em; /* Adjust font size for smaller screens */
+      }
+
+      .feature p {
+        font-size: 0.95em; /* Adjust paragraph font size for readability */
+      }
+}
+
+
+
+
+
+
+footer {
+      background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+}
+
+footer p {
+      margin: 0;
+}
+
+form {
+      display: flex;
+        flex-direction: column;
+        gap: 10px;
+}
+
+form label {
+      text-align: left;
+}
+
+form input,
+form textarea {
+      padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+}
+
+form button {
+      padding: 10px 20px;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+}
+
+form button:hover {
+      background-color: #0056b3;
+}
+
+
+/* Team Section */
+#team {
+      padding: 60px 0;
+        background-color: #f9f9f9;
+        text-align: center;
+}
+
+.team-photo {
+      margin-bottom: 40px;
+}
+
+.team-photo img {
+      width: 100%;
+        max-width: 800px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-grid {
+      display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        margin-top: 20px;
+}
+
+.team-member {
+      background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-member h3 {
+      margin: 10px 0 5px;
+        font-size: 1.2em;
+}
+
+.team-member p {
+      font-size: 0.9em;
+        color: #666;
+}
+
+
+#concept {
+      padding: 60px 0;
+        background-color: #fff;
+        text-align: center;
+}
+
+#concept h2 {
+      margin-bottom: 40px;
+        font-size: 2em;
+        color: #333;
+}
+
+.concept-grid {
+      display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+}
+
+.concept-item {
+      background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.concept-item img {
+      width: 100%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+}
+
+.concept-item p {
+      font-size: 1em;
+        color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+      .concept-grid {
+        grid-template-columns: 1fr;
+      }
 }
