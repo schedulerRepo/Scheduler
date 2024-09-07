@@ -17,7 +17,6 @@
                             <nav>
                                   <div id="top-menu" class="top-menu">
                                         <ul>
-                                              <li><a href="#home">Home</a></li>
                                               <li><a href="#about">About Us</a></li>
                                               <li><a href="#concept">Concept</a></li>
                                               <li><a href="#features">Features</a></li>
@@ -27,7 +26,6 @@
                                   </div>
                                   <div id="dropdown-menu" class="dropdown-menu">
                                         <ul>
-                                              <li><a href="#home">Home</a></li>
                                               <li><a href="#about">About Us</a></li>
                                               <li><a href="#concept">Concept</a></li>
                                               <li><a href="#features">Features</a></li>
@@ -79,11 +77,11 @@
                             </div>
                           <div class="concept-item">
                                 <img src="workflow-1.jpg" alt="Workflow Step 1">
-                                <p>Step 1: Initial data collection and processing to prepare for automation.</p>
+                                <p>Step 3: Protocol selection for custom Schedules.</p>
                             </div>
                           <div class="concept-item">
                                 <img src="workflow-2.jpg" alt="Workflow Step 2">
-                                <p>Step 2: Automated execution and monitoring of lab protocols to ensure consistency.</p>
+                                <p>Step 4: Run the Schedule Optimization Process and Execute it.</p>
                             </div>
                       </div>
                 </div>
@@ -116,25 +114,32 @@
         <section id="team">
               <div class="container">
                     <h2>Meet Our Team</h2>
-                    <div class="team-photo">
-                    <img src="{% static 'images/team_image.jpg' %}" alt="Team Photo">
-                      </div>
+
+                    <div class="image-container">
+                      <img src="{% static 'css/images/team_picture.jpg' %}" alt="Group of people" class="group-image">
+
+                <!-- Create invisible hover areas for each person -->
+                      <div class="hover-area" style="top: 24%; left: 6%;" data-name="Alberto"></div>
+                      <div class="hover-area" style="top: 7%; left: 31%;" data-name="Giovanni"></div>
+                      <div class="hover-area" style="top: 7%; left: 51%;" data-name="Riccardo"></div>
+                      <div class="hover-area" style="top: 24%; left: 78%;" data-name="Rui"></div>
+                    </div>
                     <div class="team-grid">
                           <div class="team-member">
                                 <h3>Alberto</h3>
-                                <p>Software Engineer - Specializes in lab robotics.</p>
+                                <p>Lab Robotics API.</p>
                             </div>
                           <div class="team-member">
                                 <h3>Giovanni</h3>
-                                <p>Strategy and business development.</p>
+                                <p>Strategy and Business Development.</p>
                             </div>
                           <div class="team-member">
                                 <h3>Riccardo</h3>
-                                <p>Mathematical Researcher - Specializes in optimization research.</p>
+                                <p>Mathematical Researching.</p>
                             </div>
                           <div class="team-member">
                                 <h3>Rui</h3>
-                                <p>Software Engineer - Specializes in developing UI/Automation software .</p>
+                                <p>UI/Automation Development.</p>
                             </div>
                       </div>
                 </div>
@@ -143,7 +148,7 @@
 
         <section id="contact">
               <div class="container">
-                    <h2>Contact Us</h2>
+                    <h2>Contact Us!</h2>
                     <form id="contact-form">
                           <label for="name">Name:</label>
                           <input type="text" id="name" name="name" required>
