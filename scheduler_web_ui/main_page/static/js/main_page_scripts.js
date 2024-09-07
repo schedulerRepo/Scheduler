@@ -30,11 +30,18 @@ function scrollToSection(event, sectionId) {
 
   // Use scrollIntoView with the option to align it in the center
   if (section) {
-    section.scrollIntoView({
-      behavior: "smooth", // Smooth scrolling
-      block: "center", // Align the section in the middle of the page
-    });
-  }
+
+    if(sectionId==="concept"){
+      section.scrollIntoView({
+        behavior: "smooth", // Smooth scrolling
+      });
+    }else{
+      section.scrollIntoView({
+        behavior: "smooth", // Smooth scrolling
+        block: "center", // Align the section in the middle of the page
+      });
+    }
+  } 
 
   // also close the drop down menu
   const DropMenu = document.getElementById("dropdown-menu");
@@ -53,12 +60,6 @@ const hoverAreas = document.querySelectorAll(".hover-area");
 const nameDisplay = document.getElementById("name-display");
 
 hoverAreas.forEach((area) => {
-  //area.addEventListener("mouseover", () => {
-  //  const personName = area.getAttribute("data-name");
-  //  area.textContent = personName;
-  //  area.classList.add("active");
-  //});
-
   area.addEventListener("click", () => {
     const personName = area.getAttribute("data-name");
     
@@ -70,9 +71,4 @@ hoverAreas.forEach((area) => {
       area.classList.remove("active");
     }
   });
-
-  //area.addEventListener("mouseout", () => {
-   // area.textContent = "";
-   // area.classList.remove("active");
-  //});
 });
